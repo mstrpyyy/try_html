@@ -4,17 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Learning Log</title>
+	<style>
+		.classandid {
+			background-color: slateblue;
+			color:honeydew;
+			border: 20px solid coral;
+			margin: 20px;
+			padding: 20px;
+		}
+		#forclassandid {
+			color: aquamarine;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+		body {
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		}
+	</style>
 </head>
 <body>
     <header>
         <h1><a id="header">HTML Learning Log</a></h1>
         <p>
             This will be my logbook for everything i have learnt about HTML.
-            <ul>
-                <li><a href="#header">Header</a></li>
-                <li><a href="#section">Section</a></li>
-				<li><a href="#generic">Generic Element</a></li>
-            </ul>
+            <nav>
+                <a href="#header">Header</a>
+                <a href="#section">Section</a>
+				<a href="#generic">Generic Element</a>
+				<a href="#table">Table</a>
+				<a href="#styleandcolors">Style and Colors</a>
+				<a href="#htmlmedia">HTML Media</a>
+			</nav>
+		
         </p>
     </header>
 
@@ -23,7 +43,7 @@
 
 	<section>
 		<article>
-			<h2><a id="section">contoh Section, Article, dan Aside</a></h2>
+			<h2><a id="section">Section, Article, dan Aside</a></h2>
 			<p>
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati harum voluptatem similique asperiores suscipit nesciunt atque, odio, quas saepe necessitatibus nostrum. Ea sapiente repellat facere obcaecati corporis ullam quisquam quaerat!
 			</p>
@@ -50,7 +70,7 @@
 
 	<section>
 		<article>
-			<h2>Generic Element</h2>
+			<h2><a id="generic">Generic Element</a></h2>
 			<p>
 				consists of <em>div</em> and <em>span</em>. <br>
 				<ul>
@@ -63,6 +83,132 @@
 	</section>
 
 	<hr>
+	<section>
+		<article>
+			<h2><a id="table">Table</a></h2>
+			<h3>Normal Table</h3>
+			<table border="2">
+				<tr>
+					<th>No.</th>
+					<th>Nama</th>
+					<th>Kota</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Arya</td>
+					<td>Bandung</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Denisse</td>
+					<td>Bandung</td>
+				</tr>
+			</table>
+			<h3>Colsplan Table</h3>
+			<table border="2">
+				<tr>
+					<th>No.</th>
+					<th>Nama</th>
+					<th>Kota</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td colspan="2">Arya</td>
+					<!-- <td>Bandung</td> -->
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Denisse</td>
+					<td>Bandung</td>
+				</tr>
+			</table>
+			<h3>Rowspan Table</h3>
+			<table border="2">
+				<tr>
+					<th>No.</th>
+					<th>Nama</th>
+					<th>Kota</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Arya</td>
+					<td rowspan="2">Bandung</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Denisse</td>
+					<!-- <td>Bandung</td> -->
+				</tr>
+			</table>
+		</article>
+	</section>
+	<br>
+	<hr>
+	<section>
+		<article>
+			<h2>Form</h2>
+			<label for="fname">First Name</label><br>
+			<input type="text" id="fname"><br>	
+			<label for="sname">Surname</label><br>
+			<input type="text" id="sname"><br>
+			<label for="city">City</label>
+			<select style="width: 138px;">
+				<option>Bandung</option>
+				<option>Jakarta</option>
+				<option>Surabaya</option>
+				<option>Yogyakarta</option>
+				<option>Semarang</option>
+				<option>Medan</option>
+			</select>
+			<br>
+			<br>
+			<label for="description">Short description</label><br>
+			<textarea rows="5"></textarea><br>
+			<label>Submission Date</label><br>
+			<input type="date"><br>
+			<br>
+			<label>Agreement</label>
+			<input type="checkbox"><br>
+			<button>Submit</button>
+		</article>
+	</section>
+	<br>
+	<hr>
+	<section style="background-color: teal;">
+		<article>
+			<h2 id="styleandcolors" style="color: antiquewhite;">Style and Colors</h2>
+			<p style="color: wheat;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, unde? Molestias sint cumque placeat sapiente animi nobis! Aspernatur, natus modi soluta nisi iste rerum. Aut quos laboriosam officiis odit fuga?</p>
+			<p style="color: cornsilk; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab nemo unde beatae voluptatem non rem. Porro eveniet pariatur molestiae? Omnis, rem placeat harum ratione vero reiciendis sapiente corporis? Pariatur?</p>
+			<p style="color:floralwhite; font-weight: bold; font-variant: small-caps;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab nemo unde beatae voluptatem non rem. Porro eveniet pariatur molestiae? Omnis, rem placeat harum ratione vero reiciendis sapiente corporis? Pariatur?</p>
+			<br>
+		</article>
+	</section>
+	<hr>
+	<p style="color: blueviolet; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ammmmmmmmmooooooooooooooooo</p>
+	<hr>
+	<section>
+		<article>
+		<div class="classandid">
+			<h2 id="classandid">Class and ID</h2>
+			<p id="forclassandid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae enim excepturi sit deleniti distinctio illum asperiores laboriosam veritatis culpa quidem consequatur animi possimus ipsa libero sint sunt repellendus, ab aliquid?</p>
+		</div>
+		</article>
+	</section>
+	<hr>
+	<section>
+		<article>
+			<h2 id="htmlmedia">HTML Media</h2>
+			<h3>Local Video</h3>
+			<video height="315px" controls>
+				<source src="DSCF1406.mp4" type="video/mp4">
+			</video>
+			<br>
+			<h3>Embeded Youtube Video</h3>
+			<iframe
+			width="560" height="315" src="https://www.youtube.com/embed/xgY2P5a0xwA?si=frvPM4KKs6wtEF5T"> 
+			</iframe>
+		</article>
+	</section>
 	<footer>&copy;2024, Arya Hanif Nugroho</footer>
 
 </body>
