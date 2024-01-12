@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crazy JavaScript Example</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="crazyCanvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById('crazyCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const colors = ['#FF6633', '#FFB399', '#FF33FF', '#33FF33', '#6699FF', '#FF6666', '#B366CC', '#4D8000', '#B33300', '#CC80CC'];
+
+    function getRandomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function drawCrazyShapes() {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const size = Math.random() * 50 + 20;
+
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+
+      for (let i = 0; i < 5; i++) {
+        const angle = (i * 2 * Math.PI) / 5;
+        const newX = x + Math.cos(angle) * size;
+        const newY = y + Math.sin(angle) * size;
+        ctx.lineTo(newX, newY);
+      }
+
+      ctx.fillStyle = getRandomColor();
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    function animate() {
+      drawCrazyShapes();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
