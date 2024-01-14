@@ -12,13 +12,53 @@
 			margin: 20px;
 			padding: 20px;
 		}
+
 		#forclassandid {
 			color: aquamarine;
 			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		}
+
 		body {
 			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 		}
+
+		table tr td {
+			padding: 20px;
+		}
+		
+		.firstbox {
+			width: 40px;
+			height: 40px;
+			background-color: aqua;
+			display: inline-block;	
+
+		}
+
+		.secondbox {
+			width: 80px;
+			height: 80px;
+			background-color:brown;
+			display: inline-block;	
+		}
+
+		#reminder {
+     		text-align: center;
+     		font-size: 2em;
+      		color: #800080;
+      		text-shadow: 3px 3px 3px #4b0082;
+      		animation: rainbow 5s infinite;
+			margin-top: 1px;
+    	}
+
+   		@keyframes rainbow {
+			0% { color: #ff0000; }
+			20% { color: #ff7f00; }
+			40% { color: #ffff00; }
+			60% { color: #00ff00; }
+			80% { color: #0000ff; }
+			100% { color: #8b00ff; }
+   	 	}
+
 	</style>
 </head>
 <body>
@@ -34,9 +74,15 @@
 				<a href="#styleandcolors">Style and Colors</a>
 				<a href="#htmlmedia">HTML Media</a>
 			</nav>
-		
-        </p>
-    </header>
+		</p>
+	</header>
+	
+	<hr>
+		<h2>Reminder</h2>
+		<p id="reminder">Belajar MARGIN, PADDING, dan POSITIONING di youtube</p>
+			
+
+
 
 	<hr>
 
@@ -72,13 +118,33 @@
 		<article>
 			<h2><a id="generic">Generic Element</a></h2>
 			<p>
-				consists of <em>div</em> and <em>span</em>. <br>
+				consists of <em>div</em> and <em>span</em>. 
+			</p>
 				<ul>
 					<li>this is <div style="color: darkred;">div,</div>creates new line</li>
 					<li>this is <span style="color: blue;">span,</span> doesn't create new line </li>
 				</ul>
 
-			</p>
+			<table>
+				<tr>
+					<th>Box with div</th>
+				</tr>
+				<tr>
+					<td>
+						<div class="firstbox"></div>
+						<div class="secondbox"></div>
+					</td>
+					<td><div class="firstbox" style="margin: 20px;"></div>
+						<div class="secondbox"></div>
+					</td>
+					<td>
+						<div class="secondbox" ><div class="firstbox" ></div></div>
+					</td>
+					<td>
+						<div class="secondbox" ><div class="firstbox" style="margin: 10px 10px 30px 30px;"></div></div>
+					</td>
+				</tr>
+			</table>
 		</article>
 	</section>
 
