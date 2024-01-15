@@ -1,0 +1,139 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:darkslategrey
+}
+
+header {
+    background-color: antiquewhite;
+    padding: 20px 20px 40px;
+    border-radius: 20px;
+    margin: 0px 30px;
+    border: 5px solid slategrey;
+}
+
+h1 {
+    text-align: center;
+    color: darkslategrey;
+}
+
+h2 {
+    color: antiquewhite;
+    text-decoration:underline
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    background-color:lightsalmon;
+    color: darkslategrey;
+    font-size: small;
+    /* font-weight:bold; */
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 7px;
+    /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); */
+}
+
+nav a:hover {
+    background-color: rgb(252, 188, 163);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.article1 {
+    background-color:slategrey;
+    padding: 20px 90px 40px;
+    border-radius: 20px;
+    margin: 0px 30px;
+    border: 5px solid lightsalmon;
+}
+
+.container {
+    position: relative;
+    background-color: antiquewhite;
+    padding: 80px;
+    margin: 0 0 20px;
+    border-radius: 9px;
+}
+
+.absoluteinside {
+    position: absolute;
+    text-align: center;
+    background-color:darkcyan;
+    color: antiquewhite;
+    padding: 35px 20px;
+    top: -10px;
+    left: 50px;
+    /* remove element from normal flow of the document */    
+}
+
+.static {
+    position: static;
+    background-color:darkslateblue;
+    color: antiquewhite;
+    padding: 35px 25px;
+    margin-left: 40%;
+    top: 1000px;
+    left: 1000px; 
+    /* no directional position access */
+}
+
+.relative {
+    position: relative;
+    background-color:darkcyan;
+    color: antiquewhite;
+    padding: 35px 15px;
+    bottom: -60px;
+    left: 200px;
+    /* keep element from normal flow of the document */
+}
+
+.absoluteoutside {
+    position: absolute;
+    text-align: center;
+    background-color:darkgreen;
+    color: antiquewhite;
+    padding: 3px 20px;
+    top: 485px;
+    left: 450px;
+    /* remove element from normal flow of the document */    
+}
+
+.absoluteinside {
+    position: absolute;
+    text-align: center;
+    background-color:darkcyan;
+    color: antiquewhite;
+    padding: 35px 20px;
+    top: -10px;
+    left: 50px;
+    /* remove element from normal flow of the document */    
+}
+
+.fixed a {
+    position: fixed;
+    text-align: center;
+    background-color: darkred;
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: small;
+    padding: 3px 5px;
+    top: 380px;
+    left: 0px;
+
+    /* remove element from normal flow of the document */
+    /* move with scroll */    
+}
+
+.sticky {
+    position: sticky;
+    background-color: darkred;
+    color: antiquewhite;
+    padding: 3px 20px;
+    top: 380px;
+    left: 100%;
+    /* remove element from normal flow of the document */
+    /* move with scroll */    
+}
